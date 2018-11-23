@@ -1,0 +1,5 @@
+<div [class]="dayClass" (click)="changeCategory()">
+  {{day.value}}
+  <ng-container *ngIf="faIcon"><fa-icon [icon]="faIcon"></fa-icon></ng-container>
+  <ng-container *ngIf="!faIcon">&nbsp;</ng-container>
+</div>

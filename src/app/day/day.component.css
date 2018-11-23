@@ -1,0 +1,16 @@
+.holiday {
+  background-color: green;
+  color: white;
+}
+.birthday {
+  background-color: orange;
+  color: white;
+}
+.busy {
+  background-color: red;
+  color: white;
+}
+.anniversary {
+  background-color: violet;
+  color: white;
+}

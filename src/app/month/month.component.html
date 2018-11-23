@@ -1,0 +1,49 @@
+<h4 class="month-header">{{ month.name }}</h4>
+
+<div class="table-responsive">
+  <table class="table">
+    <thead class="thead-light">
+    <tr>
+      <th id="sunday" scope="col">Su</th>
+      <th id="monday" scope="col">M</th>
+      <th id="tuesday" scope="col">Tu</th>
+      <th id="wednesday" scope="col">W</th>
+      <th id="thursday" scope="col">Th</th>
+      <th id="friday" scope="col">F</th>
+      <th id="saturday" scope="col">Sa</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td *ngFor="let space of getSpaces(firstDayIndex)"></td>
+      <td *ngFor="let day of month.days.slice(0,7-firstDayIndex)">
+        <app-day [day]="day"></app-day>
+      </td>
+    </tr>
+    <tr>
+      <td *ngFor="let day of month.days.slice(7-firstDayIndex,14-firstDayIndex)">
+        <app-day [day]="day"></app-day>
+      </td>
+    </tr>
+    <tr>
+      <td *ngFor="let day of month.days.slice(14-firstDayIndex,21-firstDayIndex)">
+        <app-day [day]="day"></app-day>
+      </td>
+    </tr>
+    <tr>
+      <td *ngFor="let day of month.days.slice(21-firstDayIndex,28-firstDayIndex)">
+        <app-day [day]="day"></app-day>
+      </td>
+    </tr>
+    <tr>
+      <td *ngFor="let day of month.days.slice(28-firstDayIndex, 35-firstDayIndex)">
+        <app-day [day]="day"></app-day>
+      </td>
+    </tr>
+    <tr>
+      <td *ngFor="let day of month.days.slice(35-firstDayIndex)">
+        <app-day [day]="day"></app-day>
+      </td>
+    </tr>
+  </table>
+</div>

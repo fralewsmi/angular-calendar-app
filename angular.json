@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "eroad-calendar": {
+    "calendar-app": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/eroad-calendar",
+            "outputPath": "dist/calendar-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,18 +50,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "eroad-calendar:build"
+            "browserTarget": "calendar-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "eroad-calendar:build:production"
+              "browserTarget": "calendar-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "eroad-calendar:build"
+            "browserTarget": "calendar-app:build"
           }
         },
         "test": {
@@ -95,7 +95,7 @@
         }
       }
     },
-    "eroad-calendar-e2e": {
+    "calendar-app-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -103,11 +103,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "eroad-calendar:serve"
+            "devServerTarget": "calendar-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "eroad-calendar:serve:production"
+              "devServerTarget": "calendar-app:serve:production"
             }
           }
         },
@@ -123,5 +123,5 @@
       }
     }
   },
-  "defaultProject": "eroad-calendar"
+  "defaultProject": "calendar-app"
 }
